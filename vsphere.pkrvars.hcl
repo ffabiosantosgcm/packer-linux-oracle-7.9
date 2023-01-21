@@ -9,10 +9,10 @@
 vcenter_insecure_connection = true
 
 #FQDN do servidor vCenter Server
-vcenter_server = "vcenter67.virtualizandoaju.com.br"
+vcenter_server = "vcenter7.virtualizandoaju.com.br"
 
 #O nome do seu Datacenter que tem o host ESXi que irá receber a imagem.
-vcenter_datacenter = "Datacenter67"
+vcenter_datacenter = "Datastore_Packer"
 
 #Número de núcleos de CPU.
 vm_CPUs = "1"
@@ -21,7 +21,7 @@ vm_CPUs = "1"
 vm_cpu_cores = "1"
 
 #Quantidade de RAM em MB.
-vm_ram = "512"
+vm_ram = "1024"
 
 #Firmware para máquina virtual.
 vm_firmware = "bios"
@@ -33,13 +33,13 @@ vm_guest_name = "Template_Packer_DHCP"
 vcenter_folder = "Templates_virtualizandoaju"
 
 #O cluster que tem o host ESXi que receberá a conexão do packer.
-vcenter_cluster = "Cluster_Virtualizandoaju67"
+vcenter_cluster = "Cluster_Virtualizandoaju7"
 
 #FQDN do servidor ESXi/vSphere que o packer será executado.
-vcenter_host = "esxi67-ft2.virtualizandoaju.com.br"
+vcenter_host = "esxi7-102.virtualizandoaju.com.br"
 
 #O datastore para armazenar o template quando completado.
-vcenter_datastore = "VMWARE_01"
+vcenter_datastore = "Datastore_Packer"
 
 #Prioridade dos dispositivos de inicialização. Padrões para disco, cdrom
 #vm_boot_order
@@ -57,7 +57,7 @@ vm_vm_version = "13"
 vm_guest_os_type = "oracleLinuxGuest"
 
 #A rede que a VM Packer utilizará.
-vcenter_network = "DPortGroup-VMs"
+vcenter_network = "VM Network"
 
 #VM network card.
 vm_network_card = "vmxnet3"
