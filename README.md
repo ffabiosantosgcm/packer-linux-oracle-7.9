@@ -1,3 +1,7 @@
+## Suporte
+
+vCenter 6.x
+
 ## packer-linux-oracle-7.9 Update
 
 Criando um Template VMware Oracle Linux com Packer Usando HCL2
