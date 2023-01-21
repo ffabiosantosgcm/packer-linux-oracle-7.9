@@ -1,7 +1,7 @@
 ######################################################################################
 # Variáveis                                https://virtualizandoajublog.wordpress.com/
 ######################################################################################
-// Boot Configuration
+/// Boot Configuration
 
 // Floppy configuration
 
