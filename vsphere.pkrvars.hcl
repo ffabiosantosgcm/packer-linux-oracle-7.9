@@ -12,7 +12,7 @@ vcenter_insecure_connection = true
 vcenter_server = "vcenter7.virtualizandoaju.com.br"
 
 #O nome do seu Datacenter que tem o host ESXi que irá receber a imagem.
-vcenter_datacenter = "Datastore_Packer"
+vcenter_datacenter = "Datacenter7"
 
 #Número de núcleos de CPU.
 vm_CPUs = "1"

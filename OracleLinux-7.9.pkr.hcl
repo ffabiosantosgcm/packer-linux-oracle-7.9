@@ -9,7 +9,7 @@
 
 variable "vcenter_server" {
   type        = string
-  description = "Servidor vCenter 6.7 UP3"
+  description = "Servidor vCenter 7"
 }
 
 variable "vcenter_username" {
@@ -243,7 +243,7 @@ source "vsphere-iso" "example" {
 
   // CDRom Configuration
   #cdrom_type           =
-  iso_paths    = ["[VMWARE_01] ISOS/OracleLinux-R7-U9-Server-x86_64-dvd.iso"]
+  iso_paths    = ["[Datastore_Packer] ISOS/OracleLinux-R7-U9-Server-x86_64-dvd.iso"]
   remove_cdrom = var.vm_remove_cdrom
   #cd_files             =
   #cd_content           =
