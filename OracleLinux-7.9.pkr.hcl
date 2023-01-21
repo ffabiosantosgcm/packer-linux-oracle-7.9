@@ -9,7 +9,7 @@
 
 variable "vcenter_server" {
   type        = string
-  description = "Servidor vCenter 7"
+  description = "Servidor vCenter 6.7"
 }
 
 variable "vcenter_username" {
