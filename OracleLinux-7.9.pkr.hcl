@@ -168,22 +168,42 @@ variable "linux_ssh_password" {
   sensitive   = true
 }
 
+# HTTP Endpoint
+
+variable "http_directory" {
+  type        = string
+  description = "Directory of config files(user-data, meta-data)."
+  default     = ""
+}
+
 ###########################################################################################
 # Source - Máquina Virtual                      https://virtualizandoajublog.wordpress.com/
 ###########################################################################################
 
 source "vsphere-iso" "example" {
 
+  //
+  data_source_command = var.common_data_source == "http" ? "inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg" : "inst.ks=cdrom:/ks.cfg"
+
   // Boot Configuration
   boot_command = [
-    "<esc><wait>",
-    "linux ks=hd:fd0:/kickstart.cfg<enter>"
+    "<up>",
+    "e",
+    "<down><down><end><wait>",
+    "text ${local.data_source_command}",
+    "<enter><wait><leftCtrlOn>x<leftCtrlOff>"
   ]
-  boot_wait = "10s"
+  boot_wait = "2s"
+
+  // HTTP Settings
+  http_directory = var.http_directory
+  http_port_max  = "10089"
+  http_port_min  = "10082"
+
   #shutdown_command      = "echo 'packer'|sudo -S /sbin/halt -h -p"
 
   // Floppy configuration
-  floppy_files = ["${path.root}/kickstart.cfg"]
+  // floppy_files = ["${path.root}/kickstart.cfg"]
 
   // Connection Configuration
   vcenter_server      = var.vcenter_server

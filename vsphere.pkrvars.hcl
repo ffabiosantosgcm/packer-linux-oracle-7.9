@@ -2,6 +2,9 @@
 # VARIÁVEIS - Connection Configuration,Optional SSH fields, Network Adapter Configuration, Create Configuration,Location Configuration
 ######################################################################################################################################
 
+# HTTP Settings
+http_directory = "http"
+
 #Dá à máquina virtual algum tempo para realmente carregar.
 #vm_boot_wait
 
@@ -9,10 +12,10 @@
 vcenter_insecure_connection = true
 
 #FQDN do servidor vCenter Server
-vcenter_server = "vcenter7.virtualizandoaju.com.br"
+vcenter_server = "vcenter67.virtualizandoaju.com.br"
 
 #O nome do seu Datacenter que tem o host ESXi que irá receber a imagem.
-vcenter_datacenter = "Datacenter7"
+vcenter_datacenter = "Datacenter67"
 
 #Número de núcleos de CPU.
 vm_CPUs = "1"
@@ -27,16 +30,16 @@ vm_ram = "1024"
 vm_firmware = "bios"
 
 #Nome da VM\Template
-vm_guest_name = "Template_Packer_DHCP"
+vm_guest_name = "Oracle_Linux_Packer_79"
 
 #A pasta para armazenar o template quando completado.
 vcenter_folder = "Templates_virtualizandoaju"
 
 #O cluster que tem o host ESXi que receberá a conexão do packer.
-vcenter_cluster = "Cluster_Virtualizandoaju7"
+vcenter_cluster = "Cluster_Virtualizandoaju67"
 
 #FQDN do servidor ESXi/vSphere que o packer será executado.
-vcenter_host = "esxi7-102.virtualizandoaju.com.br"
+vcenter_host = "esxi67-ft1.virtualizandoaju.com.br"
 
 #O datastore para armazenar o template quando completado.
 vcenter_datastore = "Datastore_Packer"
@@ -51,7 +54,7 @@ vcenter_datastore = "Datastore_Packer"
 vm_remove_cdrom = "true"
 
 #Defina a versão de hardware da VM. O padrão é a versão de hardware de VM mais recente compatível com a versão do vCenter Server.
-vm_vm_version = "13"
+vm_vm_version = "10"
 
 #Tipo do sistema operacional -> https://developer.vmware.com/apis/358/vsphere/doc/vim.vm.GuestOsDescriptor.GuestOsIdentifier.html.
 vm_guest_os_type = "oracleLinuxGuest"

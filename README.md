@@ -1,8 +1,10 @@
+<img src="https://github.com/smctighevcp/Packer/blob/main/packer-icon.svg" style="width:150px;height:150px;">
+
 ## Suporte
 
-vCenter 6.x
+vCenter/vSphere 6.x
 
-## packer-linux-oracle-7.9 Update
+## packer-linux-oracle-7.9
 
 Criando um Template VMware Oracle Linux com Packer Usando HCL2
 
