@@ -6,11 +6,11 @@
 
 vCenter/vSphere 6.x
 
-## Available Builds
+## Compilações Disponíveis
 
 * Oracle Linux 7.9
 
-## Files
+## Arquivos
 
 - `variables.pkr.hcl` - Arquivo de declaração de variável
 - `'OS-Name'.pkr.hcl` - Construir arquivo em cada configuração específica do sistema operacional
@@ -18,7 +18,7 @@ vCenter/vSphere 6.x
 - `'OS-Name'.pkrvar.hcl` - Arquivo de variáveis ​​definidas pelo usuário
 - `'OS-Name'.segredo.pkrvars.hcl` - Arquivo que contém usuários e senhas
 
-## Running packer build with hcl template
+## Executando a compilação do empacotador com o modelo hcl
 
 packer build -var-file .\vsphere_segredo.pkrvars.hcl -var-file .\vsphere.pkrvars.hcl .\OracleLinux-7.9.pkr.hcl
 
